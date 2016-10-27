@@ -1,0 +1,20 @@
+{
+    "name": "diego/testing",
+    "description": "Curso de Testing",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Diego Gutman",
+            "email": "diego.gutman85@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^5.6"
+    },
+    "autoload": {
+      "psr-4": {
+          "App\\": "App/"
+      }
+    }
+}

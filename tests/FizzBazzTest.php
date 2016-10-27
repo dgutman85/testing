@@ -3,7 +3,7 @@
 use PHPUnit\Framework\TestCase;
 use App\FizzBazz;
 
-class Test extends TestCase
+class FizzBazzTest extends TestCase
 {
     /**
     * @test

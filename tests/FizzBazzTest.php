@@ -5,13 +5,18 @@ use App\FizzBazz;
 
 class FizzBazzTest extends TestCase
 {
+    protected $fizzbazz;
+
+    public function setUp() {
+        $this->fizzbazz = new FizzBazz();
+    }
+
     /**
     * @test
     */
     public function retrieveFizzBazz()
     {
-        $fizzbazz = new FizzBazz();
-        $this->assertEquals('fizzbazz', $fizzbazz->getNumber(15));
+        $this->assertEquals('fizzbazz', $this->fizzbazz->getNumber(15));
     }
 
     /**
@@ -19,8 +24,7 @@ class FizzBazzTest extends TestCase
     */
     public function retrieveFizz()
     {
-        $fizzbazz = new FizzBazz();
-        $this->assertEquals('fizz', $fizzbazz->getNumber(3));
+        $this->assertEquals('fizz', $this->fizzbazz->getNumber(3));
     }
 
     /**
@@ -28,8 +32,7 @@ class FizzBazzTest extends TestCase
     */
     public function retrieveBazz()
     {
-        $fizzbazz = new FizzBazz();
-        $this->assertEquals('bazz', $fizzbazz->getNumber(5));
+        $this->assertEquals('bazz', $this->fizzbazz->getNumber(5));
     }
 
     /**
@@ -37,7 +40,6 @@ class FizzBazzTest extends TestCase
     */
     public function retrieveNumber()
     {
-        $fizzbazz = new FizzBazz();
-        $this->assertEquals(1, $fizzbazz->getNumber(1));
+        $this->assertEquals(1, $this->fizzbazz->getNumber(1));
     }
 }
